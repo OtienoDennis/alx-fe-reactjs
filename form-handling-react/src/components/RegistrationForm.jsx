@@ -9,9 +9,9 @@ export default function RegistrationForm () {
         setData( ( prevState => ( {...prevState, [e.target.name]: e.target.value} ) ) );
     }
     function handleSubmit ( e ) {
-        if ( !username ) return setErrors("wrong username");
-        if ( !email ) return setErrors('Wrong email');
-        if ( !password ) return setErrors('Wrong Password');
+        if (!username) return setErrors("wrong username");
+        if (!email) return setErrors('Wrong email');
+        if (!password) return setErrors('Wrong Password');
         e.preventDefault();
         console.log( data );
     }
