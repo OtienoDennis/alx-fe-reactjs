@@ -8,6 +8,9 @@ export default function RegistrationForm () {
         setData( ( prevState => ( {...prevState, [e.target.name]: e.target.value} ) ) );
     }
     function handleSubmit ( e ) {
+        if ( !username ) return;
+        if ( !email ) return;
+        if ( !password ) return;
         e.preventDefault();
         console.log( data );
     }
