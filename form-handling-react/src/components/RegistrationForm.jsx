@@ -2,15 +2,16 @@ import React, {useState} from 'react';
 
 export default function RegistrationForm () {
     const [data, setData] = useState( {username: "", email: "", password: ""} );
+    const [errors, setErrors] = useState( null );
     const {username, email, password} = data;
     function handleChange ( e ) {
         console.log( e.target.name );
         setData( ( prevState => ( {...prevState, [e.target.name]: e.target.value} ) ) );
     }
     function handleSubmit ( e ) {
-        if ( !username ) return;
-        if ( !email ) return;
-        if ( !password ) return;
+        if ( !username ) return setErrors("wrong username");
+        if ( !email ) return setErrors('Wrong email');
+        if ( !password ) return setErrors('Wrong Password');
         e.preventDefault();
         console.log( data );
     }
