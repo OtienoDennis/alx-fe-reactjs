@@ -3,7 +3,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import Login from './components/Login';
 import BlogPost from './components/BlogPost';
-import ProtectedRoute from './components/ProctectedRoute';
+import ProtectedRoute from './components/ProtectedRoute';
 import {useState} from 'react';
 
 function App () {
