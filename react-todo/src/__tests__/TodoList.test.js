@@ -5,6 +5,7 @@ import TodoList from './TodoList';
 describe('TodoList Component', () => {
   test('Initial Render - Renders demo todos', () => {
     render(<TodoList />);
+    
     const todos = screen.getAllByRole('listitem');
     expect(todos).toHaveLength(4); // Check for 4 initial todos
     expect(screen.getByText('Cook Food')).toBeInTheDocument();
@@ -15,10 +16,10 @@ describe('TodoList Component', () => {
 
   test('Adding Todos', () => {
     render(<TodoList />);
-    const input = screen.getByPlaceholderText('Add a new todo'); // Adjust placeholder text based on AddTodoForm
-    const addButton = screen.getByText('Add'); // Adjust based on AddTodoForm button text
-
-    // Simulate adding a todo
+    const input = screen.getByPlaceholderText('Add a new todo');
+    const addButton = screen.getByText('Add');
+    
+    // Simulate adding a new todo
     fireEvent.change(input, { target: { value: 'New Task' } });
     fireEvent.click(addButton);
 
