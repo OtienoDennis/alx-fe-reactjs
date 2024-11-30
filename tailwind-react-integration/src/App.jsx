@@ -1,10 +1,10 @@
+import UserProfile from './components/UserProfile'
+
 function App() {
 
   return (
     <>
-      <p className='text-3xl underline'>
-        Hello world!
-      </p>
+      <UserProfile />
     </>
   )
 }
