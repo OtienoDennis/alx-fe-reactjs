@@ -14,7 +14,9 @@ export default function RecipeDetail () {
     <div>
         <div className='sm:max-w-md md:max-w-xl bg-gray-400 my-36 rounded-md shadow-md mx-auto sm:p-10 md:p-14 hover:shadow-2xl flex flex-col items-center gap-6'>
             <h1 className='sm:text-lg md:text-xl hover:text-blue-700 font-extrabold'>{item.title}</h1>
-            <img src={item.image} alt={item.title} className='rounded-lg sm:w-40 sm:h-40 md:w-52 md:h-52 hover:scale-125 transition-transform duration-200 ease-in-out'/>
+              <img src={item.image} alt={item.title} className='rounded-lg sm:w-40 sm:h-40 md:w-52 md:h-52 hover:scale-125 transition-transform duration-200 ease-in-out' />
+            <p>ingredients</p>
+            <p>instructions</p>
             <p className='sm:text-xl md:text-3xl'>{item.summary}</p>
         </div>
     </div>
