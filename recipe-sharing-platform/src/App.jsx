@@ -1,7 +1,10 @@
 import React from 'react'
+import HomePage from './components/HomePage'
 
 export default function App() {
   return (
-    <div className='underline text-blue-500'>App</div>
+    <>
+      <HomePage />
+    </>
   )
 }
