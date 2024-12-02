@@ -9,7 +9,7 @@ export default function HomePage () {
     
     if(!jsonData) return <div>Loading...</div>
   return (
-    <div>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
         {jsonData.map((item) => (
             <div key={item.id} className='sm:max-w-xs md:max-w-sm bg-gray-400 my-10 rounded-md shadow-md mx-auto sm:p-4 md:p-8 hover:shadow-2xl flex flex-col items-center gap-4'>
                 <h1 className='sm:text-lg md:text-xl hover:text-blue-700 font-extrabold'>{item.title}</h1>
