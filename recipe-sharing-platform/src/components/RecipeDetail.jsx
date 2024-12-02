@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import data from '../data.json';
 import {useParams} from 'react-router-dom';
 
 export default function RecipeDetail () {
+    const [item, setItem] = useState( null );
     const {id} = useParams();
-    const item = data.find( ( entry ) => entry.id === parseInt( id ) );
+    useEffect( function () {
+        const fetchedData = data.find( ( entry ) => entry.id === parseInt( id ) );
+        setItem( fetchedData );
+    },[id])
     if(!item) return <div>Item not found!</div>
   return (
     <div>
