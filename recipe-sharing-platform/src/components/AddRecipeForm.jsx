@@ -11,7 +11,7 @@ export default function AddRecipeForm () {
         console.log(e.target.value)
     }
 
-    function handleSubmit ( e ) {
+    function validate ( e ) {
         e.preventDefault();
         const newErrors = {};
         if ( !title ) newErrors.title = "Title is required";
@@ -28,7 +28,7 @@ export default function AddRecipeForm () {
 
   return (
       <form 
-        onSubmit={handleSubmit}
+        onSubmit={validate}
         className='flex flex-col items-center bg-slate-300 sm:max-w-sm md:max-w-lg sm:p-4 md:p-8 mx-auto rounded-md my-10'>
         <div className='w-full max-w-md '>
             <label htmlFor='title' className='block text-lg font-medium text-gray-900 my-2'>Title</label>
