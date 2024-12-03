@@ -11,24 +11,26 @@ export default function AddRecipeForm () {
         console.log(e.target.value)
     }
 
-    function validate ( e ) {
-        e.preventDefault();
+    function validate () {
         const newErrors = {};
         if ( !title ) newErrors.title = "Title is required";
         if ( !ingredients ) newErrors.ingredients = "Ingredients are required";
         if ( !preparation ) newErrors.preparation = "Preparations steps are required";
-
         if ( Object.keys( newErrors ).length > 0 ) {
             setErrors( newErrors );
             return;
         }
-        console.log( 'Form submitted successfully!' );
+    }
+
+    function handleSubmit ( e ) {
+        e.preventDefault();    
+        validate();
         setErrors( {} );
     }
 
   return (
       <form 
-        onSubmit={validate}
+        onSubmit={handleSubmit}
         className='flex flex-col items-center bg-slate-300 sm:max-w-sm md:max-w-lg sm:p-4 md:p-8 mx-auto rounded-md my-10'>
         <div className='w-full max-w-md '>
             <label htmlFor='title' className='block text-lg font-medium text-gray-900 my-2'>Title</label>
