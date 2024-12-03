@@ -8,7 +8,7 @@ import {useState} from 'react';
 import {AuthProvider} from './components/AuthContext';
 
 function App () {
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState( false );
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState( true );
   return (
     <AuthProvider>
       <Router>

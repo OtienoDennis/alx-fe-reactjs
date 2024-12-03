@@ -12,7 +12,7 @@ export default function RecipeDetail () {
     if(!item) return <div>Item not found!</div>
   return (
     <div>
-        <div className='sm:max-w-md md:max-w-xl bg-gray-400 my-36 rounded-md shadow-md mx-auto sm:p-10 md:p-14 hover:shadow-2xl flex flex-col items-center gap-6'>
+        <div className='sm:max-w-sm md:max-w-lg bg-gray-400 my-36 rounded-md shadow-md mx-auto sm:p-10 md:p-12 hover:shadow-2xl flex flex-col items-center gap-4'>
             <h1 className='sm:text-lg md:text-xl hover:text-blue-700 font-extrabold'>{item.title}</h1>
             <img src={item.image} alt={item.title} className='rounded-lg sm:w-40 sm:h-40 md:w-52 md:h-52 hover:scale-125 transition-transform duration-200 ease-in-out' />
             <p>ingredients</p>
