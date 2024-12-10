@@ -38,7 +38,7 @@ export default function Search () {
         <button>SUBMIT</button>
       </form>
       {isLoading && <p>Loading...</p>}
-      {error && <p>User not Found!</p>}
+      {error && <p>Looks like we cant find the user</p>}
       {userData && (
         <div>
           <img src={userData.avatar_url} alt={`${userData.login}'s avatar`} />

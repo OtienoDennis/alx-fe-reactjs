@@ -8,6 +8,6 @@ export const fetchUserData = async ( userName ) => {
         console.log(response.data)
         return response.data;
     } catch ( error ) {
-        throw new Error('Looks like we cant find the user')
+        throw new Error();
     }
 }
