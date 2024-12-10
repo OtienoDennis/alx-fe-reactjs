@@ -1,10 +1,13 @@
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Home from './components/Home'
+
 function App() {
   return (
-    <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
