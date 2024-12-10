@@ -6,7 +6,6 @@ export default function Search () {
   const [userName, setUserName] = useState( '' );
   const [isLoading, setIsLoading] = useState( false );
   const [error, setError] = useState( null );
-  const [userData, setUserData] = useState( null );
   const [location, setLocation] = useState( '' );
   const [minRepos, setMinRepos] = useState( '' );
   const [searchResults, setSearchResults] = useState([]);
